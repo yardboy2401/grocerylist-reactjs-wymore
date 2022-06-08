@@ -39,8 +39,6 @@ function App() {
     setNewItem('');
   }
 
-  if (!items.length) return <p>Loading...</p>
-
   return (
     <div className="App">
       <Header title="Grocery List" />
@@ -54,7 +52,7 @@ function App() {
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
-      <Footer length={items.length} />
+      {/* <Footer length={items.length} /> */}
     </div>
   );
 }
