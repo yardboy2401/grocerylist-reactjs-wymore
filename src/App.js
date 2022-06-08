@@ -5,7 +5,7 @@ import Content from './Content';
 import Footer from './Footer';
 
 function App() {
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')) || []);
 
   const [newItem, setNewItem] = useState('');
 
@@ -52,7 +52,7 @@ function App() {
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
-      {/* <Footer length={items.length} /> */}
+      <Footer length={items.length} />
     </div>
   );
 }
